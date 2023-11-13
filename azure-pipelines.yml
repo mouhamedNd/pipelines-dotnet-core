@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  name: ubuntuVM
+  name: UbuntuVM
 
 variables:
   buildConfiguration: 'Release'
