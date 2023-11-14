@@ -16,6 +16,6 @@ steps:
   displayName: Set variables values
 
 - script: |
-      echo ${{ variables.one }} # outputs initialValue
-      echo $(one) # outputs secondValue
+      echo ${{ variables.configuration }} # outputs initialValue
+      echo $(configuration) # outputs secondValue
   displayName: Second variable pass
