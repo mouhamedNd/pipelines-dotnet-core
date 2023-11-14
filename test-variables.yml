@@ -10,3 +10,12 @@ steps:
 - script: |
     echo ${{ variables.configuration }}
     echo $(configuration)
+  displayName: First variable pass
+
+- bash: echo "##vso[task.setvqriqble variable=configuration]Debug"
+  displayName: Set variables values
+
+- script: |
+      echo ${{ variables.one }} # outputs initialValue
+      echo $(one) # outputs secondValue
+  displayName: Second variable pass
