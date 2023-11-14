@@ -6,6 +6,7 @@ pool:
  name: UbuntuVM
  
 steps:
+- checkout: none
 - script: |
     echo $ {{ variables.configuration }}
     echo $(one)
