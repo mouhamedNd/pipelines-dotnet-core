@@ -8,5 +8,5 @@ pool:
 steps:
 - checkout: none
 - script: |
-    echo $ {{ variables.configuration }}
-    echo $(one)
+    echo ${{ variables.configuration }}
+    echo $(configuration)
