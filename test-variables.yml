@@ -14,4 +14,4 @@ pool:
 steps:
 - checkout: none
 - ${{ variables.shell }}: ${{ variables.command }} 
-- script:  "echo connecting to :$(password)" 
+- bash:  "echo connecting to :$(password)" 
