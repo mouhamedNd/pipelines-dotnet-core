@@ -19,10 +19,12 @@ steps:
  - bash: |
      if ["$PASSWORD_SECRET" = "passer"]; then
         echo "Passer is your password; this is weak"
+     fi
      if [ "$(password)" = "passer"]; then 
          echo "Not except anything happens"
      else
          echo "You should map $(password) to an env variable"
+     fi
     
    env:
     PASSWORD_SECRET: $(password)  # to get secret we need to explicitely map the secret to a env variable
