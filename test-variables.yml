@@ -1,21 +1,16 @@
 variables:
 - name: configuration
   value: Release
+- name: shell
+  value: bash
+- name: command
+  value: ls -l
+
+  
 
 pool:
  name: UbuntuVM
  
 steps:
 - checkout: none
-- script: |
-    echo ${{ variables.configuration }}
-    echo $(configuration)
-  displayName: First variable pass
-
-- bash: echo "##vso[task.setvariable variable=configuration]Debug"
-  displayName: Set variables values
-
-- script: |
-      echo ${{ variables.configuration }} # outputs initialValue
-      echo $(configuration) # outputs secondValue
-  displayName: Second variable pass
+- ${{ variables.shell }}: ${{ variables.command }} 
