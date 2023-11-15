@@ -17,8 +17,8 @@ steps:
  - checkout: none
  - ${{ variables.shell }}: ${{ variables.command }} 
  - bash: |
-      "echo connecting to :$(password)" 
-      "echo I mean connecting to $PASSWORD_SECRET"
+      echo "connecting to :$(password)" 
+      echo "I mean connecting to $PASSWORD_SECRET"
    env:
     PASSWORD_SECRET: $(password)  # to get secret we need to explicitely map the secret to a env variable
  
