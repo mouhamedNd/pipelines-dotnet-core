@@ -24,3 +24,5 @@ steps:
 #         running the app is (configuration) mode"
         
  - bash: echo This script could use $SYSTEM_ACCESSTOKEN
+   env:
+      SYSTEM_ACCESSTOKEN: $(System.AccessToken)
