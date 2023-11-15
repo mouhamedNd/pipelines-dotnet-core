@@ -15,14 +15,14 @@ pool:
  
 steps:
  - checkout: none
-# - ${{ variables.shell }}: ${{ variables.command }} 
-# - bash:  "echo connecting to :$(password)" 
+ - ${{ variables.shell }}: ${{ variables.command }} 
+ - bash:  "echo connecting to :$(password)" 
 
 #These two are pulled from variables group global
 #  - bash: |
 #       "echo we are deploying on $(dotnet_version) and the 
 #         running the app is (configuration) mode"
         
- - bash: echo This script could use $SYSTEM_ACCESSTOKEN
-   env:
-      SYSTEM_ACCESSTOKEN: $(System.AccessToken)
+#  - bash: echo This script could use $SYSTEM_ACCESSTOKEN
+#    env:
+#       SYSTEM_ACCESSTOKEN: $(System.AccessToken)
