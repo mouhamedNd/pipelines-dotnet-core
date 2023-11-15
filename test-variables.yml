@@ -18,7 +18,9 @@ steps:
 # - ${{ variables.shell }}: ${{ variables.command }} 
 # - bash:  "echo connecting to :$(password)" 
 
- - bash: |
-      "echo we are deploying on $(dotnet_version) and the 
-        running the app is (configuration) mode"
+#These two are pulled from variables group global
+#  - bash: |
+#       "echo we are deploying on $(dotnet_version) and the 
+#         running the app is (configuration) mode"
         
+ - bash: echo This script could use $SYSTEM_ACCESSTOKEN
