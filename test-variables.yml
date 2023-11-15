@@ -17,6 +17,7 @@ steps:
  - checkout: none
  - ${{ variables.shell }}: ${{ variables.command }} 
  - bash:  "echo connecting to :$(password)" 
+ 
 
 #These two are pulled from variables group global
 #  - bash: |
