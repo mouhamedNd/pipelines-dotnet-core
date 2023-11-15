@@ -13,13 +13,12 @@ variables:
 pool:
  name: UbuntuVM
  
-# steps:
-# - checkout: none
+steps:
+ - checkout: none
 # - ${{ variables.shell }}: ${{ variables.command }} 
 # - bash:  "echo connecting to :$(password)" 
 
-steps:
-  - bash: |
+ - bash: |
       "echo we are deploying on $(dotnet_version) and the 
         running the app is (configuration) mode"
         
