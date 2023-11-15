@@ -20,6 +20,6 @@ pool:
 
 steps:
   - bash: |
-      "echo we are deploying on ${{ dotnet_version }} and the 
-        running the app is {{ configuration }} mode"
+      "echo we are deploying on $(dotnet_version) and the 
+        running the app is (configuration) mode"
         
