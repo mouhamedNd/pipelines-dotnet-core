@@ -6,12 +6,20 @@ variables:
 - name: command
   value: ls -l
 
+- group: global
+
   
 
 pool:
  name: UbuntuVM
  
+# steps:
+# - checkout: none
+# - ${{ variables.shell }}: ${{ variables.command }} 
+# - bash:  "echo connecting to :$(password)" 
+
 steps:
-- checkout: none
-- ${{ variables.shell }}: ${{ variables.command }} 
-- bash:  "echo connecting to :$(password)" 
+  - bash: |
+      "echo we are deploying on ${{ dotnet_version }} and the 
+        running the app is {{ configuration }} mode"
+        
