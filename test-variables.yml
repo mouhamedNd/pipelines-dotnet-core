@@ -18,7 +18,7 @@ steps:
  - ${{ variables.shell }}: ${{ variables.command }} 
  - bash: |
      if ["$PASSWORD_SECRET" = "passer"]; then
-        echo "Passer is your password; this is weak"
+        echo "passer is your password; this is weak"
      fi
      if [ "$(password)" = "passer"]; then 
          echo "Not except anything happens"
